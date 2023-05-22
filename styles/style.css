@@ -29,7 +29,13 @@ p, li {
     /* line-height 后面可以跟不同的参数，如果是数字，就是当前字体大小乘上数字 */
     line-height: 2;
     letter-spacing: 1px;
+    list-style-type: square; 
   }
+
+/*  后代选择器 */
+p strong{
+  color: #00539f;
+}
 
 img{
     display: block;
@@ -39,6 +45,20 @@ img{
 button{
   text-align: center;
   padding: 5px;
-  border: 1.5px solid red;
+  border: 2px solid red;
   margin: auto;
+  width: calc(20%);
+}
+
+/* 根据标签的状态确定样式 */
+a:link{
+  color:#00539F;
+}
+
+a:visited{
+  color: white;
+}
+
+a:hover{
+  text-decoration:none;
 }
