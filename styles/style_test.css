@@ -1,4 +1,4 @@
-/* spacing */
+/* 表格样式 布局 */
 
 table {
     table-layout: fixed;
@@ -27,12 +27,8 @@ th, td {
     padding: 20px;
 }
 
-/* typography */
+/* 表格样式 纹理 */
 
-html {
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
-  }
-  
 thead th, tfoot th {
     font-family: 'Rock Salt', cursive;
 }
@@ -89,4 +85,119 @@ caption {
     text-align: right;
     letter-spacing: 1px;
 }
-  
+
+/* || 3D风格的div 样式 */
+#name{          
+    width: 60px;
+    height: 200px;
+    color: white;
+    text-align: center;
+    padding-block-start: 30px;
+    margin-inline-start: 10px ;
+    text-shadow: 1px 1px black;
+    font-size: 18px;
+    writing-mode: vertical-rl;
+    background-color: rgb(228, 0, 0);
+    border: 1px solid rgb(102, 0, 0);
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 100%);
+    box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2), /* 标准阴影 */
+    inset 1px 1px 2px rgba(255, 255, 255, 0.5), /* 左上角白色半透明内嵌阴影 */
+    inset -1px -1px 2px rgba(0, 0, 0, 0.5); /* 右下角黑色半透明内嵌阴影 */
+}
+
+/* || 选项卡样式 */
+.info-box {
+    width: 450px;
+    height: 400px;
+  }
+
+  .info-box ul {
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .info-box li {
+    float: left;
+    list-style-type: none;
+    width: 150px;
+  }
+
+  .info-box li a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    line-height: 3;
+    background-color: red;
+    color: black;
+    text-align: center;
+  }
+
+  .info-box li a:focus, 
+  .info-box li a:hover {
+    background-color: #a60000;
+    color: white;
+  }
+
+  .info-box li a.active {
+    background-color: #a60000;
+    color: white;
+  }
+
+  .info-box .panels {
+    height: 300px;
+    position: relative;
+    clear: both;
+  }
+
+  .info-box article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    padding: 10px;
+    color: white;
+    background-color: #a60000;
+  }
+
+  .info-box .active-panel {
+    z-index: 1;
+  }
+
+/* || Check box 样式*/
+label[for="toggle"] {
+    font-size: 3rem;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: -100px;
+}
+
+aside {
+    background-color: #a60000;
+    color: white;
+
+    width: 340px;
+    height: 50%;
+    padding: 0 20px;
+    z-index: 2;
+
+    position: fixed;
+    top: 0;
+    right: -370px;
+
+    transition: 0.6s all;
+}
+
+/* 选择后状态改变 */
+
+input[type=checkbox]:checked + aside {
+    right: 0px;
+}
