@@ -38,6 +38,15 @@
             text-decoration: none;
             color: red;
         }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent; /* 左边透明 */
+            border-right: 50px solid transparent; /* 右边透明 */
+            border-top: 100px solid #f00; /* 顶部为红色，可以自行更改颜色 */
+        }
+
     </style>
   </head>
 
@@ -167,6 +176,9 @@
           </tr>
         </tfoot>
       </table>
+      
+      <h2>倒三角</h2>
+      <div class="triangle">  </div>
 
       <h2><a href="../index.html"><strong>Return to the homepage</strong></a></h2>        
   </body>
